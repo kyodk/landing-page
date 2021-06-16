@@ -1,0 +1,26 @@
+$white: #fff;
+$black: #333;
+$beige: #e4e1db;
+$brown: #544e45;
+$dark-brown: #464036;
+$dark-cyan: #7dafb2;
+$yellow: #efea3a;
+
+// 背景色
+$color-bg-light: $white;
+$color-bg-dark: $beige;
+
+// テキスト色
+$color-txt-light: $white;
+$color-txt-dark: $black;
+
+$fonts-list: 'Noto Sans', 'Noto Sans CJK JP', 'Noto Sans Japanese', sans-serif;
+
+$breakpoints: (
+  'tab': '(min-width: 768px)',
+  'pc': '(min-width: 990px)'
+);
+
+$transition: all 0.2s ease;
+
+$opacity: 0.8;

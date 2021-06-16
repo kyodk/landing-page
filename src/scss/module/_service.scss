@@ -1,0 +1,134 @@
+.service {
+  padding: 64px 18px 72px;
+  text-align: center;
+
+  @include mq(pc) {
+    padding: 88px 18px 96px;
+  }
+
+  &__heading {
+    @include heading;
+  }
+
+  &__txt {
+    margin-bottom: 32px;
+
+    @include mq(pc) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__box-wrapper {
+    margin-right: 15px;
+  }
+
+  &__box {
+    max-width: 490px;
+    padding: 24px 20px;
+    margin: 0 auto 15px;
+    background: $beige;
+    box-shadow: 15px 15px 0 0 $brown;
+
+    @include mq(tab) {
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 24px 24px 0 0 $brown;
+    }
+
+    @include mq(pc) {
+      padding: 32px;
+      margin-bottom: 32px;
+      box-shadow: 32px 32px 0 0 $brown;
+    }
+  }
+
+  &__subheading {
+    display: inline-block;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    border-bottom: 1px solid $black;
+
+    @include mq(tab) {
+      font-size: 1.8rem;
+    }
+    @include mq(pc) {
+      font-size: 2.1rem;
+    }
+  }
+
+  &__list {
+    padding: 0 0 24px 17px;
+    margin-bottom: 24px;
+    text-align: left;
+    border-bottom: 1px solid $black;
+
+    @include mq(pc) {
+      padding: 0 0 24px 21px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 8px;
+    font-size: 1.2rem;
+
+    @include mq(tab) {
+      font-size: 1.3rem;
+    }
+    @include mq(pc) {
+      font-size: 1.5rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 4px;
+      left: -17px;
+      display: block;
+      width: 13px;
+      height: 13px;
+      content: '';
+      background: $brown;
+      border-radius: 50%;
+
+      @include mq(pc) {
+        left: -21px;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &::after {
+      position: absolute;
+      top: 10px;
+      left: -13px;
+      display: block;
+      width: 5px;
+      height: 9px;
+      content: '';
+      border: solid 1.5px $beige;
+      border-top: 0;
+      border-left: 0;
+      transform: (translateY(-50%) rotate(45deg));
+
+      @include mq(pc) {
+        top: 11px;
+        left: -16px;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: right;
+
+    @include mq(tab) {
+      font-size: 2.1rem;
+    }
+    @include mq(pc) {
+      font-size: 2.5rem;
+    }
+  }
+}

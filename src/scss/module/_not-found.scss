@@ -1,0 +1,22 @@
+.not-found {
+  padding: 64px 18px 96px;
+  text-align: center;
+
+  @include mq(pc) {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+
+  &__heading {
+    @include heading;
+  }
+
+  &__txt {
+    margin-bottom: 64px;
+  }
+
+  &__btn {
+    @include btn;
+  }
+}

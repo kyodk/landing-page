@@ -1,0 +1,7 @@
+<svg id="badge" xmlns="http://www.w3.org/2000/svg" width="28" height="38" viewBox="0 0 28 38">
+  <g id="badge-2" data-name="badge">
+    <path id="Shape" d="M0,0V14L6.988,7l6.988,7V0Z" transform="translate(7.012 24)" fill="#464036"/>
+    <circle id="Oval" cx="14" cy="14" r="14" fill="#464036"/>
+    <circle id="Oval-2" data-name="Oval" cx="6" cy="6" r="6" transform="translate(8 8)" fill="#e4e1db"/>
+  </g>
+</svg>

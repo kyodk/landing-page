@@ -1,0 +1,45 @@
+.main-visual {
+  position: relative;
+  height: calc(53vh - 60px);
+  margin-bottom: 100px;
+  background: url('../images/main-visual.jpg') no-repeat center center / cover;
+
+  @include mq(tab) {
+    height: calc(75vh - 60px);
+    margin-bottom: 40px;
+  }
+
+  @include mq(pc) {
+    height: calc(75vh - 80px);
+  }
+
+  &__img {
+    position: absolute;
+    right: 0;
+    bottom: -100px;
+    left: 0;
+    width: 85%;
+    max-width: 450px;
+    margin: auto;
+    opacity: 0;
+    transform: translate(0, 40px);
+    animation: fadein 0.8s 0.8s forwards;
+
+    @include mq(tab) {
+      bottom: -40px;
+      left: initial;
+      max-width: 50%;
+    }
+
+    @include mq(pc) {
+      width: 32%;
+    }
+  }
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}

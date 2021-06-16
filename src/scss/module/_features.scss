@@ -1,0 +1,107 @@
+.features {
+  padding: 64px 18px 32px;
+  background: $beige;
+
+  @include mq(pc) {
+    padding: 88px 18px 56px;
+  }
+
+  &__heading {
+    @include heading;
+    text-align: center;
+
+    @include mq(pc) {
+      margin-bottom: 64px;
+    }
+  }
+
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include mq(tab) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+
+    @include mq(pc) {
+      align-items: flex-start;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 380px;
+    margin-bottom: 40px;
+
+    @include mq(tab) {
+      width: calc(50% - 48px);
+    }
+
+    @include mq(pc) {
+      width: calc(50% - 64px);
+      margin-bottom: 56px;
+    }
+
+    &:nth-child(odd) {
+      @include mq(tab) {
+        margin-right: 48px;
+      }
+      @include mq(pc) {
+        margin-right: 64px;
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    padding: 30px;
+    margin-bottom: 16px;
+    line-height: 0;
+    border-radius: 50%;
+    box-shadow: 2px 2px 7px rgba(0, 0, 0, 0.3);
+
+    @include mq(pc) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+
+    img {
+      width: 35px;
+    }
+  }
+
+  &__subheading {
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    @include mq(tab) {
+      font-size: 1.8rem;
+    }
+
+    @include mq(pc) {
+      margin-bottom: 20px;
+      font-size: 2.2rem;
+    }
+  }
+
+  &__txt {
+    @include mq(pc) {
+      font-size: 1.6rem;
+    }
+  }
+}

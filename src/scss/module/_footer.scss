@@ -1,0 +1,146 @@
+.footer {
+  text-align: center;
+
+  &__top {
+    padding: 56px 18px 32px;
+    font-size: 1.2rem;
+    background: $brown;
+
+    @include mq(tab) {
+      display: flex;
+      justify-content: space-between;
+      padding: 56px 18px 64px;
+      font-size: 1.3rem;
+    }
+
+    @include mq(pc) {
+      padding: 56px 5vw 64px;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__info {
+    @include mq(tab) {
+      text-align: left;
+    }
+  }
+
+  &__logo {
+    display: block;
+    margin-bottom: 16px;
+    text-align: left;
+
+    img {
+      width: 120px;
+    }
+  }
+
+  &__info-list {
+    margin-bottom: 32px;
+    color: $white;
+    text-align: left;
+  }
+
+  &__info-item {
+    display: flex;
+
+    @include mq(tab) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__info-title {
+    margin-right: 12px;
+  }
+
+  &__btn {
+    @include btn;
+
+    @include mq(tab) {
+      width: 210px;
+      height: 40px;
+      font-size: 1.4rem;
+      line-height: 40px;
+      text-align: center;
+    }
+
+    @include mq(pc) {
+      width: 210px;
+    }
+  }
+
+  &__icon-external {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-left: -5px;
+    vertical-align: middle;
+    content: '';
+    background: url('../images/to-external-link-brown.svg') no-repeat;
+  }
+
+  &__nav {
+    display: none;
+
+    @include mq(tab) {
+      display: initial;
+      text-align: right;
+    }
+  }
+
+  &__nav-item {
+    @include mq(tab) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__nav-link {
+    color: $white;
+    transition: $transition;
+
+    &:hover {
+      opacity: $opacity;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 5vw;
+    color: $white;
+    background: $dark-brown;
+  }
+
+  &__copyright {
+    font-family: 'din-2014', sans-serif;
+    text-align: center;
+
+    small {
+      font-size: 1.1rem;
+
+      @include mq(tab) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &__privacy {
+    small {
+      font-size: 1.1rem;
+
+      @include mq(tab) {
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
+  &__privacy-link {
+    color: $white;
+    transition: $transition;
+
+    &:hover {
+      text-decoration: underline;
+      opacity: $opacity;
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.about {
+  padding: 56px 18px 90px;
+  text-align: center;
+
+  @include mq(pc) {
+    padding: 88px 18px 96px;
+  }
+
+  &__heading {
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    border-bottom: dotted 1px $black;
+
+    @include mq(tab) {
+      font-size: 2.4rem;
+    }
+
+    @include mq(pc) {
+      margin-bottom: 32px;
+      font-size: 3.1rem;
+    }
+  }
+
+  &__list-container {
+    margin-bottom: 40px;
+    text-align: left;
+
+    @include mq(tab) {
+      display: flex;
+      justify-content: center;
+    }
+
+    @include mq(pc) {
+      margin-bottom: 96px;
+    }
+  }
+
+  &__list {
+    margin-left: 22px;
+
+    &--first {
+      @include mq(tab) {
+        margin-right: 56px;
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    margin-bottom: 8px;
+
+    @include mq(pc) {
+      margin-bottom: 24px;
+      font-size: 1.5rem;
+    }
+
+    &::before {
+      position: absolute;
+      top: 11px;
+      left: -16px;
+      display: block;
+      width: 6px;
+      height: 10px;
+      content: '';
+      border: solid 2px $dark-cyan;
+      border-top: 0;
+      border-left: 0;
+      transform: translateY(-50%) rotate(45deg);
+    }
+  }
+
+  &__content-container {
+    text-align: left;
+
+    @include mq(tab) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
+
+  &__content-txt-box {
+    margin-bottom: 40px;
+
+    @include mq(tab) {
+      width: 50%;
+      margin: 0 0 0 56px;
+    }
+  }
+
+  &__content-heading {
+    margin-bottom: 24px;
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    @include mq(tab) {
+      margin-bottom: 40px;
+      font-size: 2.4rem;
+    }
+
+    @include mq(pc) {
+      font-size: 3.1rem;
+    }
+  }
+
+  &__content-txt {
+    @include mq(pc) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__content-img-box {
+
+    @include mq(tab) {
+      width: 43%;
+      max-width: 552px;
+    }
+  }
+
+  &__content-img {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+  }
+}

@@ -1,0 +1,39 @@
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-weight: 400;
+  src: url('./fonts/NotoSansCJKjp-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Noto Sans Japanese';
+  font-weight: 700;
+  src: url('./fonts/NotoSansCJKjp-Bold.woff2') format('woff2');
+}
+
+html {
+  font-size: 62.5%; // 10px
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: $fonts-list;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: $color-txt-dark;
+  letter-spacing: 0.09em;
+  background: $color-bg-light;
+}
+
+a {
+  text-decoration: none;
+}
+
+img,
+svg {
+  vertical-align: bottom;
+}
+
+::selection {
+  background: #b6d5fc;
+}

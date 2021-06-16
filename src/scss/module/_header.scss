@@ -1,0 +1,48 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  background: $white;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.1);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 0 18px 0;
+    transition: $transition;
+
+    @include mq(pc) {
+      height: 80px;
+      padding: 0 0 0 5vw;
+    }
+
+    .is-scrolled & {
+      @include mq(pc) {
+        height: 60px;
+      }
+    }
+  }
+
+  &__logo-img {
+    display: block;
+    width: 130px;
+
+    @include mq(pc) {
+      width: 155px;
+    }
+  }
+
+  &__logo-desc {
+    display: none;
+
+    @include mq(pc) {
+      display: block;
+      margin-top: 6px;
+      font-size: 1.2rem;
+    }
+  }
+}

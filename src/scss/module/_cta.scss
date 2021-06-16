@@ -1,0 +1,38 @@
+.cta {
+  padding: 89px 46px;
+  text-align: center;
+  background: url('../images/cta.jpg') no-repeat center center / cover fixed;
+
+  &__txt {
+    max-width: 283px;
+    margin: 0 auto 32px;
+    color: $white;
+    text-align: left;
+
+    @include mq(tab) {
+      max-width: initial;
+      margin-bottom: 48px;
+      font-size: 1.6rem;
+      text-align: center;
+    }
+
+    @include mq(pc) {
+      margin-bottom: 56px;
+      font-size: 1.8rem;
+    }
+  }
+
+  &__btn {
+    @include btn;
+  }
+
+  &__icon-external {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-left: -5px;
+    vertical-align: middle;
+    content: '';
+    background: url('../images/to-external-link-brown.svg') no-repeat;
+  }
+}

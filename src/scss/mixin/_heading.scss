@@ -1,0 +1,30 @@
+@mixin heading {
+  margin-bottom: 32px;
+  font-size: 2.2rem;
+  font-weight: bold;
+
+  @include mq(tab) {
+    font-size: 2.7rem;
+  }
+
+  @include mq(pc) {
+    margin-bottom: 40px;
+    font-size: 3.4rem;
+  }
+
+  &-desc {
+    display: block;
+    font-family: 'din-2014', sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+    @include mq(tab) {
+      font-size: 1.4rem;
+    }
+
+    @include mq(pc) {
+      font-size: 1.6rem;
+    }
+  }
+}

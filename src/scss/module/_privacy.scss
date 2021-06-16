@@ -1,0 +1,52 @@
+.privacy {
+  padding: 64px 18px 96px;
+
+  @include mq(pc) {
+    max-width: 1280px;
+    margin: 0 auto;
+    font-size: 1.6rem;
+  }
+
+  &__heading {
+    @include heading;
+    text-align: center;
+  }
+
+  &__subheading {
+    font-weight: bold;
+  }
+
+  &__txt {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    position: relative;
+    color: $color-txt-dark;
+    border-bottom: 1px solid $color-txt-dark;
+    transition: $transition;
+
+    &:hover {
+      opacity: $opacity;
+    }
+
+    &::after {
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+      margin-top: -1px;
+      vertical-align: middle;
+      content: '';
+      background: url('../images/to-external-link-black.svg') no-repeat;
+    }
+  }
+
+  &__indent {
+    padding-left: 1em;
+  }
+
+  &__info {
+    margin-top: 32px;
+    text-align: right;
+  }
+}

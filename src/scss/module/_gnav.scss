@@ -1,0 +1,173 @@
+.gnav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  padding-top: 60px;
+  overflow: scroll;
+  pointer-events: none;
+  background: $brown;
+  opacity: 0;
+  transition: all 0.3s;
+
+  @include mq(pc) {
+    position: initial;
+    padding-top: initial;
+    overflow: initial;
+    pointer-events: initial;
+    background: initial;
+    opacity: initial;
+  }
+
+  .is-nav-open & {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  &__list {
+    padding: 0 18px;
+    text-align: center;
+
+    @include mq(pc) {
+      display: flex;
+      padding: initial;
+    }
+  }
+
+  &__item {
+    margin-bottom: 32px;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: translateY(-10px);
+
+    @include mq(pc) {
+      margin-bottom: initial;
+      opacity: initial;
+      transform: initial;
+    }
+
+    .is-nav-open & {
+      opacity: 1;
+      transform: translateY(10px);
+    }
+
+    &:not(:last-child) {
+      @include mq(pc) {
+        margin-right: 30px;
+      }
+    }
+
+    &:nth-last-child(2) {
+      @include mq(pc) {
+        margin-right: 164px;
+      }
+    }
+
+    &--contact {
+      position: relative;
+      padding-top: 32px;
+
+      @include mq(pc) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        padding: 0 30px;
+        margin-right: initial;
+        background: $brown;
+
+        .is-scrolled & {
+          height: 60px;
+        }
+      }
+
+      &::before {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: 32px;
+        height: 1px;
+        margin: 0 auto;
+        content: '';
+        background: rgba(255, 255, 255, 0.7);
+
+        @include mq(pc) {
+          display: none;
+        }
+      }
+    }
+
+    // フルスクリーンナビ用アニメーション
+    &:nth-child(1) {
+      transition-delay: 0.05s;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.1s;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.15s;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.2s;
+    }
+    &:nth-child(5) {
+      transition-delay: 0.25s;
+
+      @include mq(pc) {
+        transition: $transition;
+        transition-delay: initial;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    font-size: 1.4rem;
+    color: $color-txt-light;
+
+    @include mq(pc) {
+      color: $black;
+      transition: $transition;
+    }
+
+    &:hover {
+      @include mq(pc) {
+        opacity: $opacity;
+      }
+    }
+
+    &--contact {
+      @include mq(pc) {
+        color: $color-txt-light;
+      }
+    }
+  }
+
+  &__desc {
+    display: block;
+    margin-top: 8px;
+    font-family: 'din-2014', sans-serif;
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 2px;
+
+    @include mq(pc) {
+      display: none;
+    }
+  }
+
+  &__icon-external {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin-left: -5px;
+    vertical-align: middle;
+    content: '';
+    background: url('../images/to-external-link-white.svg') no-repeat;
+  }
+}
