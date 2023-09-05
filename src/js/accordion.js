@@ -4,8 +4,7 @@ const { questions } = elements;
 
 questions.forEach((question) => {
   question.addEventListener('click', () => {
-    // '.faq__answer'を取得
-    const answer = question.nextElementSibling;
+    const answer = question.nextElementSibling; // '.faq__answer'を取得
 
     if (question.classList.contains('is-active')) {
       question.classList.remove('is-active');

@@ -10,7 +10,6 @@ module.exports = {
   },
   module: {
     rules: [
-      // Babel
       {
         test: /\.js$/,
         use: [
@@ -23,7 +22,6 @@ module.exports = {
         ]
       },
 
-      // SCSS
       {
         test: /\.scss$/,
         use: [
@@ -45,10 +43,7 @@ module.exports = {
             options: {
               sourceMap: true,
               postcssOptions: {
-                plugins: [
-                  // ベンダープレフィックスを自動付与する
-                  ['autoprefixer', { grid: true }]
-                ]
+                plugins: [['autoprefixer', { grid: true }]]
               }
             }
           },
